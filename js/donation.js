@@ -1,10 +1,12 @@
-document.getElementById("donat1-btn").addEventListener("click", function(event){
+
+//for first donation
+document.getElementById("donat1-btn").addEventListener("click", function (event) {
 
     event.preventDefault();
-//for first donation
- 
-   
-    const donatAmountMoney =  money("donate-amount1");
+
+
+
+    const donatAmountMoney = money("donate-amount1");
     console.log(donatAmountMoney);
 
     const instituteBalance = balance("institute-balance1");
@@ -12,36 +14,17 @@ document.getElementById("donat1-btn").addEventListener("click", function(event){
 
     const addResult = donatAmountMoney + instituteBalance;
 
-    
+
     console.log(addResult);
 
 
 
     document.getElementById("institute-balance1").innerText = addResult;
 
-// //for second donation
-
-// const donatAmountMoney2 =  money("donate-amount2");
-// // console.log(donatAmountMoney);
-
-// const instituteBalance2 = balance("institute-balance2");
-// // console.log(instituteBalance);
-
-// const addResult2 = donatAmountMoney2 + instituteBalance2;
-
-
-// // console.log(addResult);
 
 
 
-// document.getElementById("institute-balance1").innerText = addResult2;
-
-
-    // sutraction part
-
-
-    //for first donation
-
+    // subtract part
 
     const withdrawAmount = balance("balance");
     console.log(withdrawAmount);
@@ -51,16 +34,86 @@ document.getElementById("donat1-btn").addEventListener("click", function(event){
     document.getElementById("balance").innerText = `${subtractResult} BDT`;
 
 
-    //  //for second donation
-
-    
-    //  const withdrawAmount2 = balance("balance");
-    //  console.log(withdrawAmount2);
- 
-    //  const subtractResult2 = withdrawAmount2 - donatAmountMoney2;
- 
-    //  document.getElementById("balance").innerText = `${subtractResult2} BDT`;
 
 
-    
+
+
 })
+
+
+//for second donation
+
+document.getElementById("donat2-btn").addEventListener("click", function (event) {
+    event.preventDefault();
+
+
+
+
+    const donatAmountMoney = money("donate-amount2");
+    // console.log(donatAmountMoney);
+
+    const instituteBalance = balance("institute-balance2");
+    // console.log(instituteBalance);
+
+    const addResult = donatAmountMoney + instituteBalance;
+
+
+    // console.log(addResult);
+
+
+
+    document.getElementById("institute-balance2").innerText = addResult;
+
+    
+    // subtract part
+
+    const withdrawAmount = balance("balance");
+    console.log(withdrawAmount);
+
+    const subtractResult = withdrawAmount - donatAmountMoney;
+
+    document.getElementById("balance").innerText = `${subtractResult} BDT`;
+
+});
+
+
+
+
+    //for Third donation
+
+
+document.getElementById("donat3-btn").addEventListener("click", function (event) {
+    event.preventDefault();
+
+
+
+
+    const donatAmountMoney = money("donate-amount3");
+    // console.log(donatAmountMoney);
+
+    const instituteBalance = balance("institute-balance3");
+    // console.log(instituteBalance);
+
+    const addResult = donatAmountMoney + instituteBalance;
+
+
+    // console.log(addResult);
+
+
+
+    document.getElementById("institute-balance3").innerText = addResult;
+
+
+
+       // subtract part
+
+
+
+    const withdrawAmount = balance("balance");
+    console.log(withdrawAmount);
+
+    const subtractResult = withdrawAmount - donatAmountMoney;
+
+    document.getElementById("balance").innerText = `${subtractResult} BDT`;
+
+});
