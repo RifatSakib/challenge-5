@@ -15,10 +15,10 @@ document.getElementById("donat1-btn").addEventListener("click", function (event)
     const mainBalance = balance("balance");
 
 
-     //   validation part start
+    //   validation part start
     const validResult = validation(donatAmountMoney, mainBalance);
 
-   //   validation part end
+    //   validation part end
 
 
 
@@ -27,13 +27,15 @@ document.getElementById("donat1-btn").addEventListener("click", function (event)
 
     document.getElementById("institute-balance1").innerText = addResult;
 
-     // add to transaction history
-     const p = document.createElement('p');
-     p.innerText = ` ${validResult[0]} Tk. is donated for ${name} New Balance: ${validResult[1]} Tk}`;
-     console.log(p); 
+    // add to transaction history
+    const currentDate = new Date();
+    const p = document.createElement('p');
 
-     // should be a common function
-     document.getElementById('transaction-container').appendChild(p);
+    p.innerHTML = `<p class="space-y-3 text-center mt-3 border border-gray-100 rounded-xl p-10">  ${validResult[0]} Tk. is donated for ${name} <br> Date: ${currentDate}</p> `;
+
+
+    document.getElementById('transaction-container').appendChild(p);
+
 
 
 
@@ -61,19 +63,19 @@ document.getElementById("donat2-btn").addEventListener("click", function (event)
 
 
     const mainBalance = balance("balance");
+    const name = document.getElementById("feni").innerText;
 
 
-   
     const donatAmountMoney = money("donate-amount2");
 
     const instituteBalance = balance("institute-balance2");
 
 
 
-     //   validation part start
+    //   validation part start
     const validResult = validation(donatAmountMoney, mainBalance);
 
-   //   validation part end
+    //   validation part end
 
 
 
@@ -84,6 +86,14 @@ document.getElementById("donat2-btn").addEventListener("click", function (event)
 
 
 
+    // add to transaction history
+    const currentDate = new Date();
+    const p = document.createElement('p');
+
+    p.innerHTML = `<p class="space-y-3 text-center mt-3 border border-gray-100 rounded-xl p-10">  ${validResult[0]} Tk. is donated for ${name} <br> Date: ${currentDate}</p> `;
+
+
+    document.getElementById('transaction-container').appendChild(p);
 
     // subtract part
 
@@ -109,6 +119,7 @@ document.getElementById("donat3-btn").addEventListener("click", function (event)
 
     const mainBalance = balance("balance");
 
+    const name = document.getElementById("aid").innerText;
 
 
     const donatAmountMoney = money("donate-amount3");
@@ -117,10 +128,10 @@ document.getElementById("donat3-btn").addEventListener("click", function (event)
 
 
 
-     //   validation part start
+    //   validation part start
     const validResult = validation(donatAmountMoney, mainBalance);
 
-   //   validation part end
+    //   validation part end
 
 
 
@@ -129,6 +140,15 @@ document.getElementById("donat3-btn").addEventListener("click", function (event)
 
     document.getElementById("institute-balance3").innerText = addResult;
 
+
+    // add to transaction history
+    const currentDate = new Date();
+    const p = document.createElement('p');
+
+    p.innerHTML = `<p class="space-y-3 text-center mt-3 border border-gray-100 rounded-xl p-10">  ${validResult[0]} Tk. is donated for ${name} <br> Date: ${currentDate}</p> `;
+
+
+    document.getElementById('transaction-container').appendChild(p);
 
 
 
