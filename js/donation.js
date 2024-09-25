@@ -5,6 +5,8 @@ document.getElementById("donat1-btn").addEventListener("click", function (event)
     event.preventDefault();
 
 
+    const name = document.getElementById("noyakhali").innerText;
+
 
     const donatAmountMoney = money("donate-amount1");
 
@@ -24,6 +26,14 @@ document.getElementById("donat1-btn").addEventListener("click", function (event)
     const addResult = validResult[0] + instituteBalance;
 
     document.getElementById("institute-balance1").innerText = addResult;
+
+     // add to transaction history
+     const p = document.createElement('p');
+     p.innerText = ` ${validResult[0]} Tk. is donated for ${name} New Balance: ${validResult[1]} Tk}`;
+     console.log(p); 
+
+     // should be a common function
+     document.getElementById('transaction-container').appendChild(p);
 
 
 
