@@ -16,6 +16,8 @@ function validation(donation, balance) {
 
     else {
 
+        alert('Donation Successful,Thank You!');
+
        const values = [donation,balance]
 
         return values;

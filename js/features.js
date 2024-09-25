@@ -11,11 +11,16 @@ document.getElementById('history-btn-main')
     })
 
 
+
+
+
+
 function showSectionById(id){
     // hide all the sections
     document.getElementById('card-section').classList.add('hidden');
     document.getElementById('transaction').classList.add('hidden');
     
+
     // show the section with the provide id as parameter
     document.getElementById(id).classList.remove('hidden');
 }
