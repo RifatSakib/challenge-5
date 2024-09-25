@@ -18,8 +18,4 @@ function balance(id) {
 
 }
 
-function add(money, balance){
 
-    const addResult = money + balance;
-    return addResult;
-}
